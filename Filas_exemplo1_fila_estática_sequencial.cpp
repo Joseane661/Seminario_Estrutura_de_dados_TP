@@ -1,4 +1,4 @@
-//inclus„o das bibliotecas
+//inclus√£o das bibliotecas
 #include <stdio.h>
 #include <stdlib.h>
 #include <locale.h>
@@ -8,7 +8,7 @@ using namespace std;
 
 int const MAX = 5;
 
-//VariavÈis de controle (inicio e fim)
+//Variav√©is de controle (inicio e fim)
 class Fila
 {
 	private:
@@ -25,12 +25,12 @@ class Fila
 
 };
 
-//Inicia as vari·veis Inicio e Fim
+//Inicia as vari√°veis Inicio e Fim
 
 //construtor
 Fila:: Fila()
 {
-	Inicio = 0; // PosiÁ„o inicial da fila
+	Inicio = 0; // Posi√ß√£o inicial da fila
 	Fim = -1; // Para desinfileirar
 };
 
@@ -61,13 +61,13 @@ bool Fila:: Fila_Cheia()
 
 bool Fila:: Fila_Enfileirar(int valor)
 {
-	if(Fila_Cheia())  //n„o pode inserir elementos
+	if(Fila_Cheia())  //n√£o pode inserir elementos
 	{
 		return false;
 	}
 	else
 	{
-		Fim++;  //possÌvel enfileirar
+		Fim++;  //poss√≠vel enfileirar
 		fila[Fim] = valor;
 		return true;
 	}
@@ -75,7 +75,7 @@ bool Fila:: Fila_Enfileirar(int valor)
 
 int Fila:: Fila_Desenfileirar()
 {
-	if(Fila_Vazia())  //n„o consegue desenfileirar caso esteja vazia
+	if(Fila_Vazia())  //n√£o consegue desenfileirar caso esteja vazia
 	{
 		cout << endl << "Fila vazia" << endl;
 	}
@@ -83,7 +83,7 @@ int Fila:: Fila_Desenfileirar()
 	{
 		desenfileirado = fila[Inicio];
         fila[Inicio] = NULL;                                                                          ;
-		Inicio++; //A Inicio pula de posiÁ„o
+		Inicio++; //A Inicio pula de posi√ß√£o
 		return desenfileirado;
 	}
 }
@@ -118,11 +118,11 @@ int main()
 	 
 	cout << endl << "Tamanho da fila:  "<< f.Fila_Tamanho();
     cout << endl << "Desenfileirando...valor:  " << f.Fila_Desenfileirar();
-    cout << endl << "PrÛximo valor a sair È:  " << f.Fila_GetHead() << endl;
+    cout << endl << "Pr√≥ximo valor a sair √©:  " << f.Fila_GetHead() << endl;
     
 	cout << endl << "Tamanho da fila: " << f.Fila_Tamanho();
 	cout << endl << "Desenfileirando...valor: " << f.Fila_Desenfileirar();
-	cout << endl << "PrÛximo valor a sair È: " << f.Fila_GetHead() << endl;
+	cout << endl << "Pr√≥ximo valor a sair √©: " << f.Fila_GetHead() << endl;
 	
 	cout << endl << "Tamanho da fila: " << f.Fila_Tamanho();
 	cout << endl << "Desenfileirando...valor: " << f.Fila_Desenfileirar();
